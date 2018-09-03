@@ -1,0 +1,122 @@
+
+line 3 :Program       ProgramHead   program       
+line 3 :              ProgramName   sd            
+line 4 :       DeclarePart   
+line 4 :              VarDecpart    var           
+line 5 :                     VarDecList    TypeDef       BaseType      integer       
+line 5 :                            VarIdList     x             
+line 5 :                                   VarIdMore     ,             
+line 5 :                                          VarIdList     y             
+line 5 :                                                 VarIdMore     ,             
+line 5 :                                                        VarIdList     z             
+line 5 :                            ;             
+line 6 :              ProDecpart    ProDec        procedure     
+line 6 :                            ProName       f             
+line 6 :                            (             
+line 6 :                            ParamList     ParamDecList  Param         TypeDef       BaseType      integer       
+line 6 :                                                 FormList      x             
+line 6 :                                                        FidMore       ,             
+line 6 :                                                               FormList      y             
+line 6 :                                          ParamMore     ;             
+line 6 :                                                 ParamDecList  Param         var           
+line 6 :                                                               FormList      z             
+line 6 :                            )             
+line 6 :                            ;             
+line 7 :                            ProcDecPart   DeclarePart   
+line 7 :                            ProcBody      ProgramBody   begin         
+line 8 :                                          StmList       Stm           AssCall       AssignmentRest
+line 8 :                                                                      :=            
+line 8 :                                                                      Exp           Term          Factor        Variable      x             
+line 8 :                                                                             OtherTerm     AddOp         +             
+line 8 :                                                                                    Exp           Term          Factor        Variable      y             
+line 8 :                                                                                           OtherTerm     AddOp         +             
+line 8 :                                                                                                  Exp           Term          Factor        Variable      z             
+line 8 :                                                 StmMore       StmList       Stm           OutputStm     write         
+line 9 :                                                                             (             
+line 9 :                                                                             Exp           Term          Factor        Variable      x             
+line 9 :                                                                             )             
+line 9 :                                                               StmMore       StmList       Stm           OutputStm     write         
+line 10 :                                                                                           (             
+line 10 :                                                                                           Exp           Term          Factor        Variable      y             
+line 10 :                                                                                           )             
+line 10 :                                                                             StmMore       StmList       Stm           OutputStm     write         
+line 11 :                                                                                                         (             
+line 11 :                                                                                                         Exp           Term          Factor        Variable      z             
+line 11 :                                                                                                         )             
+line 12 :                                          end           
+line 13 :       ProgramBody   begin         
+line 14 :              StmList       Stm           AssCall       AssignmentRest
+line 14 :                                          :=            
+line 14 :                                          Exp           Term          Factor        3             
+line 14 :                     StmMore       StmList       Stm           AssCall       AssignmentRest
+line 15 :                                                        :=            
+line 15 :                                                        Exp           Term          Factor        4             
+line 15 :                                   StmMore       StmList       Stm           AssCall       AssignmentRest
+line 16 :                                                                      :=            
+line 16 :                                                                      Exp           Term          Factor        5             
+line 16 :                                                 StmMore       StmList       Stm           AssCall       CallStmRest   (             
+line 17 :                                                                                    ActParamList  Exp           Term          Factor        Variable      x             
+line 17 :                                                                                           ActParamMore  ,             
+line 17 :                                                                                                  ActParamList  Exp           Term          Factor        Variable      y             
+line 17 :                                                                                                         ActParamMore  ,             
+line 17 :                                                                                                                ActParamList  Exp           Term          Factor        Variable      z             
+line 17 :                                                                                    )             
+line 17 :                                                               StmMore       StmList       Stm           OutputStm     write         
+line 18 :                                                                                           (             
+line 18 :                                                                                           Exp           Term          Factor        Variable      x             
+line 18 :                                                                                           )             
+line 18 :                                                                             StmMore       StmList       Stm           OutputStm     write         
+line 19 :                                                                                                         (             
+line 19 :                                                                                                         Exp           Term          Factor        Variable      y             
+line 19 :                                                                                                         )             
+line 19 :                                                                                           StmMore       StmList       Stm           OutputStm     write         
+line 20 :                                                                                                                       (             
+line 20 :                                                                                                                       Exp           Term          Factor        Variable      z             
+line 20 :                                                                                                                       )             
+line 20 :                                                                                                         StmMore       StmList       Stm           AssCall       CallStmRest   (             
+line 21 :                                                                                                                                            ActParamList  Exp           Term          Factor        6             
+line 21 :                                                                                                                                                   ActParamMore  ,             
+line 21 :                                                                                                                                                          ActParamList  Exp           Term          Factor        Variable      x             
+line 21 :                                                                                                                                                                        OtherTerm     AddOp         +             
+line 21 :                                                                                                                                                                               Exp           Term          Factor        Variable      y             
+line 21 :                                                                                                                                                                                      OtherTerm     AddOp         +             
+line 21 :                                                                                                                                                                                             Exp           Term          Factor        Variable      z             
+line 21 :                                                                                                                                                                 ActParamMore  ,             
+line 21 :                                                                                                                                                                        ActParamList  Exp           Term          Factor        Variable      y             
+line 21 :                                                                                                                                            )             
+line 21 :                                                                                                                       StmMore       StmList       Stm           OutputStm     write         
+line 22 :                                                                                                                                                   (             
+line 22 :                                                                                                                                                   Exp           Term          Factor        Variable      x             
+line 22 :                                                                                                                                                   )             
+line 22 :                                                                                                                                     StmMore       StmList       Stm           OutputStm     write         
+line 23 :                                                                                                                                                                 (             
+line 23 :                                                                                                                                                                 Exp           Term          Factor        Variable      y             
+line 23 :                                                                                                                                                                 )             
+line 23 :                                                                                                                                                   StmMore       StmList       Stm           OutputStm     write         
+line 24 :                                                                                                                                                                               (             
+line 24 :                                                                                                                                                                               Exp           Term          Factor        Variable      z             
+line 24 :                                                                                                                                                                               )             
+line 24 :                                                                                                                                                                 StmMore       StmList       Stm           AssCall       CallStmRest   (             
+line 25 :                                                                                                                                                                                                    ActParamList  Exp           Term          Factor        Variable      x             
+line 25 :                                                                                                                                                                                                                  OtherTerm     AddOp         +             
+line 25 :                                                                                                                                                                                                                         Exp           Term          Factor        Variable      y             
+line 25 :                                                                                                                                                                                                           ActParamMore  ,             
+line 25 :                                                                                                                                                                                                                  ActParamList  Exp           Term          Factor        Variable      y             
+line 25 :                                                                                                                                                                                                                                       OtherFactor   AddOp         /             
+line 25 :                                                                                                                                                                                                                                              Term          Factor        Variable      x             
+line 25 :                                                                                                                                                                                                                         ActParamMore  ,             
+line 25 :                                                                                                                                                                                                                                ActParamList  Exp           Term          Factor        Variable      x             
+line 25 :                                                                                                                                                                                                    )             
+line 25 :                                                                                                                                                                               StmMore       StmList       Stm           OutputStm     write         
+line 26 :                                                                                                                                                                                                           (             
+line 26 :                                                                                                                                                                                                           Exp           Term          Factor        Variable      x             
+line 26 :                                                                                                                                                                                                           )             
+line 26 :                                                                                                                                                                                             StmMore       StmList       Stm           OutputStm     write         
+line 27 :                                                                                                                                                                                                                         (             
+line 27 :                                                                                                                                                                                                                         Exp           Term          Factor        Variable      y             
+line 27 :                                                                                                                                                                                                                         )             
+line 27 :                                                                                                                                                                                                           StmMore       StmList       Stm           OutputStm     write         
+line 28 :                                                                                                                                                                                                                                       (             
+line 28 :                                                                                                                                                                                                                                       Exp           Term          Factor        Variable      z             
+line 28 :                                                                                                                                                                                                                                       )             
+line 29 :              end           
